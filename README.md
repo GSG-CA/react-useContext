@@ -109,7 +109,6 @@ export default MoviesContext;
 import MoviesContext from './context/moviesContext';
 //....code
 
-render() {
     return (
       <MoviesContext.Provider value={{ deleteMovie, movies }}>
         <div className="App">
@@ -170,17 +169,14 @@ function MoviesProvider ({children}) {
 
   deleteMovie = (id) => {...}
 
-  render() {
-    return (
-      <MoviesContext.Provider value={{ deleteMovie, movies }}>
-        {children}
-      </MoviesContext.Provider>
-    );
-  }
+  return (
+    <MoviesContext.Provider value={{ deleteMovie, movies }}>
+      {children}
+    </MoviesContext.Provider>
+  );
 }
 
 export default MoviesProvider;
-
 ```
 
 </details>
